@@ -212,45 +212,136 @@ const hzp = [
       "https://apl.geology.sk/geofond/rastre/PDF/Zavod-mezozoikum(20,67,68)_DP.pdf",
   },
 ];
+
+const upuHzp = [
+  {
+    Nazov: "Pavlovce nad Uhom",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P8_19.pdf",
+  },
+  {
+    Nazov: "Trnava",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P3_14.pdf",
+  },
+  {
+    Nazov: "Beša",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P8_18.pdf",
+  },
+];
+
+const upuRhzp = [
+  {
+    Nazov: "Viedenská panva - sever",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P6_19.pdf",
+  },
+];
+
+const zrusHzp = [
+  {
+    Nazov: "Beša nad Latoricou",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P2_03.pdf",
+  },
+  {
+    Nazov: "Klenová",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P19_15.pdf",
+  },
+  {
+    Nazov: "Nitra",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P16_05.pdf",
+  },
+  {
+    Nazov: "Východoslovenská nížina",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P14_03.pdf",
+  },
+  {
+    Nazov: "Topolčany",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P1_19.pdf",
+  },
+  {
+    Nazov: "Pavlovce nad Uhom",
+    Rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P8_19.pdf",
+  },
+];
+
 function App() {
   return (
-    <table>
-      <th>Ropa neparafinická</th>
-      <tr>
-        {rnp.map((data) => (
-          <div>
-            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
-            <a href={data.Rozhodnutie} target="_blank">
-              {data.Rozhodnutie}
-            </a>
-          </div>
-        ))}
-      </tr>
-      <th>Ropa parafinická</th>
+    <>
+      <table>
+        <th>Ropa neparafinická</th>
+        <tr>
+          {rnp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+        <th>Ropa parafinická</th>
 
-      <tr>
-        {rp.map((data) => (
-          <div>
-            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
-            <a href={data.Rozhodnutie} target="_blank">
-              {data.Rozhodnutie}
-            </a>
-          </div>
-        ))}
-      </tr>
-      <th>Horlavy zemny plyn</th>
+        <tr>
+          {rp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+        <th>Horlavy zemny plyn</th>
 
-      <tr>
-        {hzp.map((data) => (
-          <div>
-            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
-            <a href={data.Rozhodnutie} target="_blank">
-              {data.Rozhodnutie}
-            </a>
-          </div>
-        ))}
-      </tr>
-    </table>
+        <tr>
+          {hzp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+      </table>
+      <table>
+        <caption style={{ fontSize: "40px" }}>Urcene PU</caption>
+        <th>Horľavý zemný plyn</th>
+        <tr>
+          {upuHzp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+        <th>Ropa a horľavý zemný plyn</th>
+        <tr>
+          {upuRhzp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+      </table>
+      <table>
+        <caption style={{ fontSize: "40px" }}>Zrusene PU</caption>
+        <th>Horľavý zemný plyn</th>
+        <tr>
+          {zrusHzp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+              <a href={data.Rozhodnutie} target="_blank">
+                {data.Rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+      </table>
+    </>
   );
 }
 
