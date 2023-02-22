@@ -214,16 +214,43 @@ const hzp = [
 ];
 function App() {
   return (
-    <div>
-      {rnp.map((data) => (
-        <>
-          <span>{data.Nazov}</span>
-          <a href={data.Rozhodnutie} target="_blank">
-            {data.Rozhodnutie}
-          </a>
-        </>
-      ))}
-    </div>
+    <table>
+      <th>Ropa neparafinická</th>
+      <tr>
+        {rnp.map((data) => (
+          <div>
+            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+            <a href={data.Rozhodnutie} target="_blank">
+              {data.Rozhodnutie}
+            </a>
+          </div>
+        ))}
+      </tr>
+      <th>Ropa parafinická</th>
+
+      <tr>
+        {rp.map((data) => (
+          <div>
+            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+            <a href={data.Rozhodnutie} target="_blank">
+              {data.Rozhodnutie}
+            </a>
+          </div>
+        ))}
+      </tr>
+      <th>Horlavy zemny plyn</th>
+
+      <tr>
+        {hzp.map((data) => (
+          <div>
+            <span style={{ paddingRight: "10px" }}>{data.Nazov}</span>
+            <a href={data.Rozhodnutie} target="_blank">
+              {data.Rozhodnutie}
+            </a>
+          </div>
+        ))}
+      </tr>
+    </table>
   );
 }
 
