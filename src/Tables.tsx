@@ -345,7 +345,7 @@ const zrusRzp = [
     rozhodnutie: "https://apl.geology.sk/geofond/rastre/PDF/P7_15.pdf",
   },
 ];
-
+console.log(zrusHzp.length);
 const Tables = () => {
   return (
     <>
@@ -419,56 +419,22 @@ const Tables = () => {
       </table>
       <table>
         <caption style={{ fontSize: "40px" }}>
-          {" "}
           <Link to="/zpu">Zrusene PU (preklik na mapu)</Link>
         </caption>
-        <th>Horľavý zemný plyn</th>
-        <tr>
-          {zrusHzp.map((data) => (
-            <div>
-              <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
-              <a href={data.rozhodnutie} target="_blank">
-                {data.rozhodnutie}
-              </a>
-            </div>
-          ))}
-        </tr>
-        <th>Zemný plyn</th>
-        <tr>
-          {zrusHzp.map((data) => (
-            <div>
-              <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
-              <a href={data.rozhodnutie} target="_blank">
-                {data.rozhodnutie}
-              </a>
-            </div>
-          ))}
-        </tr>
-        <th>Horľavý zemný plyn</th>
-        <tr>
-          {zrusHzp.map((data) => (
-            <div>
-              <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
-              <a href={data.rozhodnutie} target="_blank">
-                {data.rozhodnutie}
-              </a>
-            </div>
-          ))}
-        </tr>
-        <th>Ropa zemný plyn</th>
-        <tr>
-          {zrusRzp.map((data) => (
-            <div>
-              <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
-              <a href={data.rozhodnutie} target="_blank">
-                {data.rozhodnutie}
-              </a>
-            </div>
-          ))}
-        </tr>
-        <th>Ropa a horľavý zemný plyn</th>
+        <th>Ropa Horľavý zemný plyn</th>
         <tr>
           {zrusRhzp.map((data) => (
+            <div>
+              <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
+              <a href={data.rozhodnutie} target="_blank">
+                {data.rozhodnutie}
+              </a>
+            </div>
+          ))}
+        </tr>
+        <th>Ropa a Zemný plyn</th>
+        <tr>
+          {zrusRzp.map((data) => (
             <div>
               <span style={{ paddingRight: "10px" }}>{data.nazov}</span>
               <a href={data.rozhodnutie} target="_blank">

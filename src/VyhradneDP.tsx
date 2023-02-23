@@ -20,6 +20,7 @@ import { vyhradneDp } from "./useData";
 // center={[48.67, 19.7]}
 
 const VyhradneDP = () => {
+  console.log(vyhradneDp.features.length);
   // Define the conversion parameters for S-JTSK / Krovak East North to WGS84
   const krovakParams = `+proj=krovak +lat_0=49.5 +lon_0=24.833333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +pm=greenwich +units=m +no_defs`;
 
@@ -59,7 +60,6 @@ const VyhradneDP = () => {
         />
         {getPolygonCoordinates(vyhradneDp).map(
           (coordinates: any, key: number) => {
-            console.log("coordinates.geometry", coordinates.attributes);
             return (
               <Polyline
                 key={key}
