@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Tables.css";
 
 const rnp = [
@@ -349,6 +350,9 @@ const Tables = () => {
   return (
     <>
       <table>
+        <caption style={{ fontSize: "40px" }}>
+          <Link to="/vdp">Vyhradne DP (preklik na mapu)</Link>
+        </caption>
         <th>Ropa neparafinická</th>
         <tr>
           {rnp.map((data) => (
@@ -386,7 +390,10 @@ const Tables = () => {
         </tr>
       </table>
       <table>
-        <caption style={{ fontSize: "40px" }}>Urcene PU</caption>
+        <caption style={{ fontSize: "40px" }}>
+          {" "}
+          <Link to="/upu">Urcene PU (preklik na mapu)</Link>
+        </caption>
         <th>Horľavý zemný plyn</th>
         <tr>
           {upuHzp.map((data) => (
@@ -411,7 +418,10 @@ const Tables = () => {
         </tr>
       </table>
       <table>
-        <caption style={{ fontSize: "40px" }}>Zrusene PU</caption>
+        <caption style={{ fontSize: "40px" }}>
+          {" "}
+          <Link to="/zpu">Zrusene PU (preklik na mapu)</Link>
+        </caption>
         <th>Horľavý zemný plyn</th>
         <tr>
           {zrusHzp.map((data) => (

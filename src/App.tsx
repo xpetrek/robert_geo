@@ -1,6 +1,6 @@
 import VyhradneDP from "./VyhradneDP";
-import NavrhyPU from "./NavrhyPU";
 import ZrusenePU from "./ZrusenePU";
+import UrcenePU from "./UrcenePU";
 import Tables from "./Tables";
 import { Route, Link, BrowserRouter, Routes } from "react-router-dom";
 
@@ -11,7 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Tables />} />
           <Route path="/vdp" element={<VyhradneDP />} />
-          <Route path="/npu" element={<NavrhyPU />} />
+          <Route path="/upu" element={<UrcenePU />} />
           <Route path="/zpu" element={<ZrusenePU />} />
         </Routes>
       </BrowserRouter>

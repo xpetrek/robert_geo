@@ -2709,7 +2709,7 @@ export const zrusenePU = {
   ],
 };
 
-export const navrhyPU = {
+export const urcenePU = {
   features: [
     {
       attributes: {

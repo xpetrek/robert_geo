@@ -15,11 +15,11 @@ import "leaflet/dist/leaflet.css";
 import icon from "leaflet/dist/images/marker-icon.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import proj from "proj4";
-import { navrhyPU } from "./useData";
+import { urcenePU } from "./useData";
 
 // center={[48.67, 19.7]}
 
-const NavrhyPU = () => {
+const UrcenePU = () => {
   // Define the conversion parameters for S-JTSK / Krovak East North to WGS84
   const krovakParams = `+proj=krovak +lat_0=49.5 +lon_0=24.833333 +alpha=30.28813972222222 +k=0.9999 +x_0=0 +y_0=0 +ellps=bessel +pm=greenwich +units=m +no_defs`;
 
@@ -57,7 +57,7 @@ const NavrhyPU = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        {getPolygonCoordinates(navrhyPU).map(
+        {getPolygonCoordinates(urcenePU).map(
           (coordinates: any, key: number) => {
             console.log("coordinates.geometry", coordinates.attributes);
             return (
@@ -85,4 +85,4 @@ const NavrhyPU = () => {
   );
 };
 
-export default NavrhyPU;
+export default UrcenePU;
